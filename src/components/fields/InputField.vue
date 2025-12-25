@@ -1,5 +1,6 @@
 <template>
   <input
+    class="input-field"
     v-bind="field.attrs"
     :value="modelValue"
     @input="emit('update:modelValue', $event.target.value)"
@@ -21,4 +22,13 @@ defineProps({
 const emit = defineEmits(['update:modelValue'])
 </script>
 
-<style scoped></style>
+<style scoped>
+.input-field {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+</style>

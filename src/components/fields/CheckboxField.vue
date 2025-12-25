@@ -1,5 +1,6 @@
 <template>
   <input
+    class="checkbox-field"
     type="checkbox"
     :checked="modelValue"
     @change="emit('update:modelValue', $event.target.checked)"
@@ -21,4 +22,9 @@ defineProps({
 const emit = defineEmits(['update:modelValue'])
 </script>
 
-<style scoped></style>
+<style scoped>
+.checkbox-field {
+  width: 20px;
+  height: 20px;
+}
+</style>

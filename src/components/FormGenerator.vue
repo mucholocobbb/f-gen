@@ -1,7 +1,7 @@
 <template>
-  <form class="form-generator" @submit.prevent="onSave">
+  <form class="form" @submit.prevent="onSave">
     <div v-for="field in schema" :key="field.name" class="form-field">
-      <label v-if="field.label">
+      <label v-if="field.label" class="form-label">
         {{ field.label }}
       </label>
 
@@ -57,4 +57,25 @@ function onCancel() {
 }
 </script>
 
-<style scoped></style>
+<style scoped lang="scss">
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+  &-field {
+    display: flex;
+    align-items: center;
+  }
+  &-label {
+    flex: 0 0 150px;
+    font-weight: bold;
+    align-self: center;
+  }
+  &-actions {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+  }
+}
+</style>
