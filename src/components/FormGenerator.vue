@@ -73,9 +73,25 @@ function onCancel() {
     align-self: center;
   }
   &-actions {
+    width: 150%;
+    margin-top: 32px;
+    border-top: 1px solid #ddd;
+    padding: 8px;
     display: flex;
     gap: 8px;
     justify-content: flex-end;
+    & button {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 6px;
+      &:hover {
+        cursor: pointer;
+        border-bottom: 2px solid #cccaca;
+      }
+      &:active {
+        border-bottom: 2px solid #aaa;
+        color: rgb(70, 70, 70);
+      }
+    }
   }
 }
 </style>
