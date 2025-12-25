@@ -1,0 +1,33 @@
+[
+  {
+    "type": "input",
+    "name": "email",
+    "label": "Email",
+    "attrs": {
+      "type": "email",
+      "placeholder": "Введите email"
+    }
+  },
+  {
+    "type": "input",
+    "name": "password",
+    "label": "Пароль",
+    "attrs": {
+      "type": "password"
+    }
+  },
+  {
+    "type": "select",
+    "name": "role",
+    "label": "Роль",
+    "options": [
+      { "label": "Admin", "value": "admin" },
+      { "label": "User", "value": "user" }
+    ]
+  },
+  {
+    "type": "checkbox",
+    "name": "agree",
+    "label": "Согласен с условиями"
+  }
+]

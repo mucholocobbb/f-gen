@@ -1,0 +1,44 @@
+[
+  {
+    "type": "input",
+    "name": "firstName",
+    "label": "Имя",
+    "attrs": {
+      "type": "text",
+      "placeholder": "Введите имя"
+    }
+  },
+  {
+    "type": "input",
+    "name": "lastName",
+    "label": "Фамилия",
+    "attrs": {
+      "type": "text",
+      "placeholder": "Введите фамилию"
+    }
+  },
+  {
+    "type": "textarea",
+    "name": "about",
+    "label": "О себе",
+    "attrs": {
+      "rows": 4,
+      "placeholder": "Кратко расскажите о себе"
+    }
+  },
+  {
+    "type": "select",
+    "name": "gender",
+    "label": "Пол",
+    "options": [
+      { "label": "Не выбран", "value": "" },
+      { "label": "Мужской", "value": "male" },
+      { "label": "Женский", "value": "female" }
+    ]
+  },
+  {
+    "type": "checkbox",
+    "name": "publicProfile",
+    "label": "Публичный профиль"
+  }
+]
