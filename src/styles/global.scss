@@ -1,0 +1,105 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  list-style: none;
+}
+
+:where(ul, ol):where([class]) {
+  padding-left: 0;
+}
+
+body,
+:where(blockquote, figure):where([class]) {
+  margin: 0;
+}
+
+:where(h1, h2, h3, h4, h5, h6, p, ul, ol, dl):where([class]) {
+  margin-block: 0;
+}
+
+:where(dd[class]) {
+  margin-left: 0;
+}
+
+:where(ul[class]) {
+  list-style: none;
+}
+html {
+  height: 100%;
+  font-size: 16px;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  max-width: 1200px;
+
+  min-height: 100%;
+
+  margin: 0 auto;
+
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+input,
+textarea,
+select,
+button {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 480px) {
+}
