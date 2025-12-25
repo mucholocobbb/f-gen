@@ -44,11 +44,9 @@ export const formSchema = {
       } catch (e: any) {
         commit('setError', e.message)
       } finally {
-        const delay = 500 + Math.random() * 2000
-
         setTimeout(async () => {
           commit('setLoading', false)
-        }, delay)
+        }, 500)
       }
     },
   },
