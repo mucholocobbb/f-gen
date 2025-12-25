@@ -1,8 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import App from '@/App.vue'
 import MainPage from '@/pages/MainPage.vue'
-import FirstDemoForm from '@/pages/FirstDemoForm.vue'
-import SecondDemoForm from '@/pages/SecondDemoForm.vue'
+import LoginForm from '@/pages/LoginForm.vue'
+import ProfileForm from '@/pages/ProfileForm.vue'
+import FeedbackForm from '@/pages/FeedbackForm.vue'
+import SettingsForm from '@/pages/SettingsForm.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -10,7 +12,7 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      redirect: '/main',
+      redirect: '/logindemo',
       component: App,
       children: [],
     },
@@ -20,14 +22,40 @@ const router = createRouter({
       component: MainPage,
       children: [
         {
-          path: '/firstdemo',
-          name: 'firstdemo',
-          component: FirstDemoForm,
+          path: '/logindemo',
+          name: 'logindemo',
+          component: LoginForm,
+          meta: {
+            title: 'Страница входа',
+            description: 'Страница входа',
+          },
         },
         {
-          path: '/seconddemo',
-          name: 'seconddemo',
-          component: SecondDemoForm,
+          path: '/profiledemo',
+          name: 'profiledemo',
+          component: ProfileForm,
+          meta: {
+            title: 'Профиль пользователя',
+            description: 'Страница профиля',
+          },
+        },
+        {
+          path: '/feedbackdemo',
+          name: 'feedbackdemo',
+          component: FeedbackForm,
+          meta: {
+            title: 'Обратная связь',
+            description: 'Страница обратной связи',
+          },
+        },
+        {
+          path: '/settingsdemo',
+          name: 'settingsdemo',
+          component: SettingsForm,
+          meta: {
+            title: 'Настройки пользователя',
+            description: 'Страница настроек',
+          },
         },
       ],
     },

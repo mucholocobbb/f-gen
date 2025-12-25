@@ -1,0 +1,30 @@
+[
+  {
+    "type": "select",
+    "name": "language",
+    "label": "Язык интерфейса",
+    "options": [
+      { "label": "Русский", "value": "ru" },
+      { "label": "English", "value": "en" }
+    ]
+  },
+  {
+    "type": "select",
+    "name": "theme",
+    "label": "Тема",
+    "options": [
+      { "label": "Светлая", "value": "light" },
+      { "label": "Тёмная", "value": "dark" }
+    ]
+  },
+  {
+    "type": "checkbox",
+    "name": "notifications",
+    "label": "Включить уведомления"
+  },
+  {
+    "type": "checkbox",
+    "name": "autoSave",
+    "label": "Автосохранение"
+  }
+]

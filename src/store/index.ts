@@ -1,24 +1,14 @@
 import { createStore } from 'vuex'
-
-interface State {
-  count: number
-}
+import { formData } from './modules/formData'
+import { formSchema } from './modules/formSchema'
 
 export default createStore({
-  state: {
-    count: 0,
-  },
-  getters: {
-    double: (state: State) => state.count * 2,
-  },
-  mutations: {
-    increment(state: State) {
-      state.count++
-    },
-  },
-  actions: {
-    incrementAsync({ commit }) {
-      commit('increment')
-    },
+  state: {},
+  getters: {},
+  mutations: {},
+  actions: {},
+  modules: {
+    form: formData,
+    schema: formSchema,
   },
 })

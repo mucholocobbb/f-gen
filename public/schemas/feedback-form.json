@@ -1,0 +1,34 @@
+[
+  {
+    "type": "input",
+    "name": "name",
+    "label": "Имя",
+    "attrs": {
+      "type": "text",
+      "placeholder": "Ваше имя"
+    }
+  },
+  {
+    "type": "input",
+    "name": "email",
+    "label": "Email",
+    "attrs": {
+      "type": "email",
+      "placeholder": "Ваш email"
+    }
+  },
+  {
+    "type": "textarea",
+    "name": "message",
+    "label": "Сообщение",
+    "attrs": {
+      "rows": 5,
+      "placeholder": "Введите сообщение"
+    }
+  },
+  {
+    "type": "checkbox",
+    "name": "agree",
+    "label": "Я согласен на обработку персональных данных"
+  }
+]
