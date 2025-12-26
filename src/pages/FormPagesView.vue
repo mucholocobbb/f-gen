@@ -2,7 +2,15 @@
   <FormGenerator :schema="schema" v-model="formData" @save="save" @cancel="cancel">
     <!-- Кастомный слот для поля email, закоментил чтобы не мешал  -->
     <!-- <template #field-email="{ value, update }">
-      <input class="custom-email" :value="value" @input="update($event.target.value)" />
+      <input :value="value" @input="update($event.target.value)" class="custom-email" />
+    </template> -->
+    <!-- <template #field-agree="{ value, update }">
+      <input
+        type="checkbox"
+        :checked="value"
+        @change="update($event.target.checked)"
+        class="custom-checkbox"
+      />
     </template> -->
   </FormGenerator>
 </template>
@@ -43,4 +51,19 @@ onMounted(() => {
 })
 </script>
 
-<style scoped></style>
+<style lang="scss">
+.custom-email {
+  width: 100%;
+  padding: 8px;
+  border: $custom-element;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.custom-checkbox {
+  width: 20px;
+  height: 20px;
+  outline: $custom-element;
+}
+</style>
